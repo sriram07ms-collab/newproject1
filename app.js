@@ -1,14 +1,12 @@
 (function() {
   var state = { corpus: null };
   var defaultCorpus = {
-    amc: { name: 'HDFC Mutual Fund', website: 'https://www.hdfcfund.com/' },
-    lastUpdated: '2025-11-03',
+    amc: { name: 'Nippon India Mutual Fund', website: 'https://mf.nipponindiaim.com/' },
+    lastUpdated: '2025-11-04',
     schemes: [
-      { displayName: 'HDFC Top 100 Fund', shortName: 'HDFC Top 100', category: 'Large Cap', sources: { factsheet: 'https://www.hdfcfund.com/schemes/hdfc-top-100-fund', kim: 'https://www.hdfcfund.com/download/kim-hdfc-top-100', sid: 'https://www.hdfcfund.com/download/sid-hdfc-top-100' } },
-      { displayName: 'HDFC Flexi Cap Fund', shortName: 'HDFC Flexi Cap', category: 'Flexi Cap', sources: { factsheet: 'https://www.hdfcfund.com/schemes/hdfc-flexi-cap-fund', kim: 'https://www.hdfcfund.com/download/kim-hdfc-flexi-cap', sid: 'https://www.hdfcfund.com/download/sid-hdfc-flexi-cap' } },
-      { displayName: 'HDFC ELSS Tax Saver', shortName: 'HDFC ELSS', category: 'ELSS', sources: { factsheet: 'https://www.hdfcfund.com/schemes/hdfc-elss-tax-saver', kim: 'https://www.hdfcfund.com/download/kim-hdfc-elss', sid: 'https://www.hdfcfund.com/download/sid-hdfc-elss' } },
-      { displayName: 'HDFC Balanced Advantage Fund', shortName: 'HDFC BAF', category: 'Dynamic Asset Allocation/BAF', sources: { factsheet: 'https://www.hdfcfund.com/schemes/hdfc-balanced-advantage-fund', kim: 'https://www.hdfcfund.com/download/kim-hdfc-baf', sid: 'https://www.hdfcfund.com/download/sid-hdfc-baf' } },
-      { displayName: 'HDFC Mid-Cap Opportunities Fund', shortName: 'HDFC Mid-Cap Opportunities', category: 'Mid Cap', sources: { factsheet: 'https://www.hdfcfund.com/schemes/hdfc-mid-cap-opportunities-fund', kim: 'https://www.hdfcfund.com/download/kim-hdfc-mid-cap', sid: 'https://www.hdfcfund.com/download/sid-hdfc-mid-cap' } }
+      { displayName: 'Nippon India Large Cap Fund', shortName: 'Nippon Large Cap', category: 'Large Cap', sources: { factsheet: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-large-cap-fund', kim: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum', sid: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document' } },
+      { displayName: 'Nippon India Flexi Cap Fund', shortName: 'Nippon Flexi Cap', category: 'Flexi Cap', sources: { factsheet: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-flexi-cap-fund', kim: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum', sid: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document' } },
+      { displayName: 'Nippon India ELSS Tax Saver Fund', shortName: 'Nippon ELSS', category: 'ELSS', sources: { factsheet: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-elss-tax-saver-fund', kim: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum', sid: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document' } }
     ],
     links: {
       education: {
