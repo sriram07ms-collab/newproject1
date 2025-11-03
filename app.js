@@ -2,7 +2,7 @@
   var state = { corpus: null };
   var defaultCorpus = {
     amc: { name: 'Nippon India Mutual Fund', website: 'https://mf.nipponindiaim.com/' },
-    lastUpdated: '2025-11-04',
+    lastUpdated: '2025-11-03',
     schemes: [
       { displayName: 'Nippon India Large Cap Fund', shortName: 'Nippon Large Cap', category: 'Large Cap', sources: { factsheet: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-large-cap-fund', kim: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum', sid: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document' } },
       { displayName: 'Nippon India Flexi Cap Fund', shortName: 'Nippon Flexi Cap', category: 'Flexi Cap', sources: { factsheet: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-flexi-cap-fund', kim: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum', sid: 'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document' } },
