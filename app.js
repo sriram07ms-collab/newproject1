@@ -1,5 +1,5 @@
 (function() {
-  var state = { corpus: null };
+  var state = { corpus: null, rag: [] };
   var defaultCorpus = {
     amc: { name: 'Nippon India Mutual Fund', website: 'https://mf.nipponindiaim.com/' },
     lastUpdated: '2025-11-03',
@@ -58,6 +58,45 @@
     return { advice: advice, scheme: scheme, intents: intents };
   }
 
+  function loadRag() {
+    var bust = Date.now().toString();
+    return fetch('data/rag_dataset.jsonl?t=' + bust, { cache: 'no-store' })
+      .then(function(r){ return r.text(); })
+      .then(function(txt){
+        var lines = txt.split(/\n+/).map(function(s){ return s.trim(); }).filter(Boolean);
+        var items = [];
+        for (var i = 0; i < lines.length; i++) {
+          try { items.push(JSON.parse(lines[i])); } catch (e) {}
+        }
+        state.rag = items;
+      })
+      .catch(function(){ state.rag = []; });
+  }
+
+  function tokenize(s) {
+    return normalize(s).split(/[^a-z0-9]+/).filter(Boolean);
+  }
+
+  function retrieve(query, k) {
+    if (!state.rag || !state.rag.length) return [];
+    var qTokens = tokenize(query);
+    if (!qTokens.length) return [];
+    var scored = [];
+    for (var i = 0; i < state.rag.length; i++) {
+      var item = state.rag[i];
+      var hay = (item.section || '') + ' ' + (item.tags ? item.tags.join(' ') : '') + ' ' + (item.text || '');
+      var tokens = tokenize(hay);
+      var set = {};
+      for (var t = 0; t < tokens.length; t++) set[tokens[t]] = (set[tokens[t]] || 0) + 1;
+      var score = 0;
+      for (var q = 0; q < qTokens.length; q++) score += (set[qTokens[q]] || 0);
+      if (score > 0) scored.push({ item: item, score: score });
+    }
+    scored.sort(function(a,b){ return b.score - a.score; });
+    var n = typeof k === 'number' ? k : 3;
+    return scored.slice(0, n).map(function(s){ return s.item; });
+  }
+
   function answer(query, cls) {
     var c = state.corpus;
     var nowStamp = c && c.lastUpdated ? c.lastUpdated : '';
@@ -68,6 +107,17 @@
         text: 'I can’t provide investment advice. Please see SEBI’s investor education resources.',
         citeUrl: c.links.education.sebiInvestorCharter,
         lastUpdated: nowStamp
+      };
+    }
+
+    // Try RAG retrieval first for general factual/how-to queries
+    var hits = retrieve(query, 1);
+    if (hits && hits.length) {
+      var h = hits[0];
+      return {
+        text: h.text,
+        citeUrl: h.url,
+        lastUpdated: h.lastFetched || nowStamp
       };
     }
 
@@ -179,6 +229,9 @@
       .then(function(r){ return r.json(); })
       .then(function(json){ state.corpus = json; fireCorpusLoaded(json.lastUpdated); })
       .catch(function(){ state.corpus = defaultCorpus; fireCorpusLoaded(defaultCorpus.lastUpdated); });
+
+    // Load RAG dataset (best-effort)
+    loadRag();
   }
 
   if (document.readyState === 'loading') {
