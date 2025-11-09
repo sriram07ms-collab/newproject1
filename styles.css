@@ -91,12 +91,42 @@ body {
   background: rgba(15, 186, 125, 0.18);
 }
 
+.pill.warning {
+  background: rgba(197, 48, 48, 0.12);
+  color: #8c1f1f;
+  border: 1px solid rgba(197, 48, 48, 0.3);
+}
+
 .hero__note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-secondary);
-  border-top: 1px solid var(--border-soft);
-  padding-top: 16px;
+  color: #8c1f1f;
+  background: rgba(197, 48, 48, 0.08);
+  border: 1px solid rgba(197, 48, 48, 0.2);
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-top: 8px;
+}
+
+.hero__note strong {
+  color: #c53030;
+}
+
+.hero__note-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c53030;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .chat {
