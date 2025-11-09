@@ -145,8 +145,6 @@ examplePills.forEach((pill) => {
 
 window.addEventListener("DOMContentLoaded", () => {
   renderMessage(
-    "Hi! I cover four Nippon India equity schemes: Large Cap, Flexi Cap, ELSS Tax Saver, and Small Cap. Ask a factual question and I'll cite the source.",
-    "assistant",
-    SOURCES[0]
+    "Hi! I cover four Nippon India equity schemes: Large Cap, Flexi Cap, ELSS Tax Saver, and Small Cap. Ask a factual question and I'll cite the official source."
   );
 });

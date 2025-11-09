@@ -4,7 +4,7 @@ const SOURCES = [
   'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-large-cap-fund',
   'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-flexi-cap-fund',
   'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-elss-tax-saver-fund',
-  'https://mf.nipponindiaim.com/FundsAndPerformance/Pages/NipponIndia-Small-Cap-Fund.aspx',
+  'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-small-cap-fund',
   'https://mf.nipponindiaim.com/investor-services/nav-and-dividends',
   'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum',
   'https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document',
@@ -124,7 +124,7 @@ const KNOWLEDGE_BASE = [
     intents: ['expense ratio', 'ter', 'cost'],
     schemes: ['nippon india small cap fund'],
     answer: 'Nippon India Small Cap Fund Direct Plan TER stands at 0.92% (Regular Plan 1.76%) based on the 30 Sep 2025 disclosure. [Source]',
-    citation: 'https://mf.nipponindiaim.com/FundsAndPerformance/Pages/NipponIndia-Small-Cap-Fund.aspx'
+    citation: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-small-cap-fund'
   },
   {
     id: 'smallcap-exit',
@@ -145,7 +145,7 @@ const KNOWLEDGE_BASE = [
     intents: ['riskometer', 'risk', 'benchmark'],
     schemes: ['nippon india small cap fund'],
     answer: 'Riskometer: Very High. Benchmark: Nifty Smallcap 250 Total Return Index. [Source]',
-    citation: 'https://mf.nipponindiaim.com/FundsAndPerformance/Pages/NipponIndia-Small-Cap-Fund.aspx'
+    citation: 'https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-small-cap-fund'
   },
   {
     id: 'nav-updates',
