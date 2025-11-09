@@ -1,50 +1,50 @@
 <!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"UTF-8\" />
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Facts-Only Mutual Fund Assistant</title>
-  <link rel=\"icon\" type=\"image/svg+xml\" href=\"assets/groww-favicon.svg\" />
-  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />
-  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />
-  <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\" />
-  <link rel=\"stylesheet\" href=\"styles.css\" />
+  <link rel="icon" type="image/svg+xml" href="assets/groww-favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class=\"app-shell\">
-    <header class=\"hero\">
-      <div class=\"hero__content\">
-        <div class=\"hero__brand\">
-          <img src=\"assets/logo.svg\" alt=\"Assistant logo\" width=\"28\" height=\"28\" loading=\"lazy\" />
-          <p class=\"hero__eyebrow\">Facts-Only Mutual Fund AI Assistant</p>
+  <main class="app-shell">
+    <header class="hero">
+      <div class="hero__content">
+        <div class="hero__brand">
+          <img src="assets/logo.svg" alt="Assistant logo" width="28" height="28" loading="lazy" />
+          <p class="hero__eyebrow">Facts-Only Mutual Fund AI Assistant</p>
         </div>
-        <h1 class=\"hero__title\">Nippon India Scheme FAQ</h1>
-        <p class=\"hero__subtitle\">
+        <h1 class="hero__title">Nippon India Scheme FAQ</h1>
+        <p class="hero__subtitle">
           Welcome! Ask about expense ratios, exit loads, SIP minimums, riskometers, benchmarks, or statement downloads.
           Facts-only. No investment advice.
         </p>
-        <div class=\"hero__examples\">
-          <span class=\"pill\">What is the SIP minimum for Nippon India Flexi Cap Fund?</span>
-          <span class=\"pill\">Exit load for Nippon India Small Cap Fund?</span>
-          <span class=\"pill\">How do I download my capital gains statement?</span>
+        <div class="hero__examples">
+          <span class="pill">What is the SIP minimum for Nippon India Flexi Cap Fund?</span>
+          <span class="pill">Exit load for Nippon India Small Cap Fund?</span>
+          <span class="pill">How do I download my capital gains statement?</span>
         </div>
       </div>
-      <div class=\"hero__note\">Facts-only. No investment advice.</div>
+      <div class="hero__note">Facts-only. No investment advice.</div>
     </header>
 
-    <section class=\"chat\" aria-live=\"polite\">
-      <div class=\"chat__window\" id=\"chatWindow\"></div>
-      <form class=\"chat__form\" id=\"chatForm\">
-        <label class=\"sr-only\" for=\"chatInput\">Ask a factual question about the selected schemes</label>
-        <input id=\"chatInput\" name=\"chatInput\" type=\"text\" placeholder=\"Ask a factual question...\" autocomplete=\"off\" required />
-        <button type=\"submit\">Send</button>
+    <section class="chat" aria-live="polite">
+      <div class="chat__window" id="chatWindow"></div>
+      <form class="chat__form" id="chatForm">
+        <label class="sr-only" for="chatInput">Ask a factual question about the selected schemes</label>
+        <input id="chatInput" name="chatInput" type="text" placeholder="Ask a factual question..." autocomplete="off" required />
+        <button type="submit">Send</button>
       </form>
     </section>
   </main>
-  <footer class=\"footer\">
+  <footer class="footer">
     <p>Powered by verified disclosures from Nippon India Mutual Fund, AMFI, and SEBI. Updated November 2025.</p>
   </footer>
-  <script src=\"data/faqs.js\"></script>
-  <script src=\"script.js\"></script>
+  <script src="data/faqs.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
