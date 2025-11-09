@@ -1,0 +1,74 @@
+{
+  "amc": {
+    "name": "Nippon India Mutual Fund",
+    "website": "https://mf.nipponindiaim.com/"
+  },
+  "lastUpdated": "2025-11-04",
+  "schemes": [
+    {
+      "displayName": "Nippon India Large Cap Fund",
+      "shortName": "Nippon Large Cap",
+      "category": "Large Cap",
+      "sources": {
+        "factsheet": "https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-large-cap-fund",
+        "kim": "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum",
+        "sid": "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document"
+      }
+    },
+    {
+      "displayName": "Nippon India Flexi Cap Fund",
+      "shortName": "Nippon Flexi Cap",
+      "category": "Flexi Cap",
+      "sources": {
+        "factsheet": "https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-flexi-cap-fund",
+        "kim": "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum",
+        "sid": "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document"
+      }
+    },
+    {
+      "displayName": "Nippon India ELSS Tax Saver Fund",
+      "shortName": "Nippon ELSS",
+      "category": "ELSS",
+      "sources": {
+        "factsheet": "https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-elss-tax-saver-fund",
+        "kim": "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum",
+        "sid": "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document"
+      }
+    }
+  ],
+  "links": {
+    "education": {
+      "sebiInvestorCharter": "https://investor.sebi.gov.in/investor_education.html",
+      "amfiInvestorCorner": "https://www.amfiindia.com/investor-corner",
+      "amfiELSSFAQ": "https://www.amfiindia.com/investor-corner/knowledge-center/faqs#elss",
+      "camsHowTo": "https://new.camsonline.com/Investors/Statements/Consolidated-Account-Statement",
+      "kfinHowTo": "https://mfs.kfintech.com/investor/General/Download-Statements"
+    },
+    "regulatory": {
+      "sebiMFRegulations": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3"
+    },
+    "disclosures": {
+      "amfiRiskometer": "https://www.amfiindia.com/investor-corner/knowledge-center/risk-o-meter"
+    }
+  },
+  "sourcesList": [
+    "https://mf.nipponindiaim.com/",
+    "https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-large-cap-fund",
+    "https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-flexi-cap-fund",
+    "https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-elss-tax-saver-fund",
+    "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/key-information-memorandum",
+    "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/scheme-information-document",
+    "https://mf.nipponindiaim.com/investor-services/forms-and-downloads/addenda-and-notices",
+    "https://mf.nipponindiaim.com/investor-services/nav-and-dividends",
+    "https://www.amfiindia.com/investor-corner",
+    "https://www.amfiindia.com/investor-corner/knowledge-center/faqs#elss",
+    "https://www.amfiindia.com/investor-corner/knowledge-center/risk-o-meter",
+    "https://investor.sebi.gov.in/investor_education.html",
+    "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3",
+    "https://new.camsonline.com/Investors/Statements/Consolidated-Account-Statement",
+    "https://mfs.kfintech.com/investor/General/Download-Statements",
+    "https://www.amfiindia.com/investor-corner/knowledge-center/kyc"
+  ]
+}
+
+

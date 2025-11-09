@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/data/corpus.json"
+  [headers.values]
+    Cache-Control = "no-store"
+

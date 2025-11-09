@@ -1,6 +1,6 @@
 # Facts-Only Mutual Fund Assistant
 
-A tiny Groww-inspired FAQ chatbot that serves factual responses about four Nippon India Mutual Fund schemes. It relies exclusively on official AMC, AMFI, and SEBI disclosures and cites one source in every answer. The assistant refuses portfolio or opinion questions and guides investors to SEBI resources instead.
+Groww-inspired FAQ chatbot that returns verified facts for four Nippon India Mutual Fund equity schemes. Every response cites an official AMC / AMFI / SEBI / RTA disclosure and the assistant politely refuses any opinionated or advisory prompts.
 
 ## Covered Schemes
 - Nippon India Large Cap Fund
@@ -8,24 +8,21 @@ A tiny Groww-inspired FAQ chatbot that serves factual responses about four Nippo
 - Nippon India ELSS Tax Saver Fund
 - Nippon India Small Cap Fund
 
-## Local Preview
-1. Ensure Python 3 is installed (for a lightweight static server).
-2. From the project root run:
-   `ash
+## Run Locally
+1. Install Python 3 (for a lightweight static server).
+2. From the project root execute:
+   ```bash
    python -m http.server 8080
-   `
-3. Open [http://localhost:8080](http://localhost:8080) in a browser.
-4. Press Ctrl+C in the terminal to stop the server.
-
-> A server is already running in this workspace on port 8080 for quick testing. Stop it with Ctrl+C when done.
+   ```
+3. Visit [http://localhost:8080](http://localhost:8080) in your browser.
+4. Stop the server with `Ctrl+C`.
 
 ## Deploy to GitHub Pages
-1. Create a new GitHub repository (public or private with Pages enabled) and push the contents of this folder.
-2. In GitHub, go to **Settings → Pages** and set the source to main branch with / (root) folder.
-3. Save. GitHub Pages will publish the static site at https://<username>.github.io/<repo>/ within a few minutes.
-4. Update the repository README with the live URL.
+1. Push the repository to GitHub.
+2. In **Settings → Pages**, choose `main` branch and `/ (root)` folder.
+3. Save to publish at `https://<username>.github.io/<repo>/`.
 
-## Data & Citations (18 Official Sources)
+## Knowledge Base Sources (19)
 1. https://mf.nipponindiaim.com/
 2. https://mf.nipponindiaim.com/our-products/by-asset-class/
 3. https://mf.nipponindiaim.com/funds-and-plans/equity-funds/nippon-india-large-cap-fund
@@ -46,13 +43,14 @@ A tiny Groww-inspired FAQ chatbot that serves factual responses about four Nippo
 18. https://new.camsonline.com/Investors/Statements/Consolidated-Account-Statement
 19. https://mfs.kfintech.com/investor/General/Download-Statements
 
-## Project Structure
-- index.html – UI layout and content skeleton
-- styles.css – Groww-inspired styling
-- data/faqs.js – Knowledge base, sources, refusal logic
-- script.js – Chat workflow, matching logic, rendering
+## File Map
+- `index.html` – layout, welcome copy, sample prompts
+- `styles.css` – Groww-inspired theming
+- `data/faqs.js` – intent table, scheme aliases, refusal logic
+- `script.js` – chat controller and rendering
+- `.github/workflows/*.yml` – optional Pages deployment workflow
 
-## Notes
-- Answers focus strictly on factual scheme attributes and servicing workflows.
-- Each chat response renders exactly one clickable citation.
-- All copy avoids advice language and defers to SEBI/AMFI resources when necessary.
+## Behaviour Highlights
+- One clear citation per answer.
+- Rejects portfolios/recommendations; points to SEBI education resources.
+- Fallback directs users to Nippon India disclosure hub.
